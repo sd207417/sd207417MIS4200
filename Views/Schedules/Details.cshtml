@@ -1,0 +1,42 @@
+﻿@model sd207417MIS4200.Models.Schedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Schedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.courseDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.courseDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.studentFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.studentFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.semester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.semester)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.scheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

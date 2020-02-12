@@ -49,7 +49,7 @@ namespace sd207417MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "courseID,courseDescription,courseTime,instructorID")] Course course)
+        public ActionResult Create([Bind(Include = "courseID,courseSection,courseDescription,courseOnline,courseTime,instructorID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace sd207417MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "courseID,courseDescription,courseTime,instructorID")] Course course)
+        public ActionResult Edit([Bind(Include = "courseID,courseSection,courseDescription,courseOnline,courseTime,instructorID")] Course course)
         {
             if (ModelState.IsValid)
             {

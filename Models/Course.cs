@@ -15,6 +15,8 @@ namespace sd207417MIS4200.Models
 
         [Display(Name = "Course Description")]
         public string courseDescription { get; set; }
+        [Display(Name = "Offered Online")]
+        public bool courseOnline { get; set; }
         [Display(Name = "Time")]
         public string courseTime { get; set; }
         public int instructorID { get; set; }

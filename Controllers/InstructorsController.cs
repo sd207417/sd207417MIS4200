@@ -47,7 +47,7 @@ namespace sd207417MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "instructorID,instructorFirstName,instructorLastName,instructorPhone,instructorEmail")] Instructor instructor)
+        public ActionResult Create([Bind(Include = "instructorID,instructorFirstName,instructorLastName,instructorDepartment,instructorPhone,instructorEmail")] Instructor instructor)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace sd207417MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "instructorID,instructorFirstName,instructorLastName,instructorPhone,instructorEmail")] Instructor instructor)
+        public ActionResult Edit([Bind(Include = "instructorID,instructorFirstName,instructorLastName,instructorDepartment,instructorPhone,instructorEmail")] Instructor instructor)
         {
             if (ModelState.IsValid)
             {

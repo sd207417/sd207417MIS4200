@@ -17,6 +17,8 @@ namespace sd207417MIS4200.Models
         public string studentPhone { get; set; }
         [Display(Name = "Email")]
         public string studentEmail { get; set; }
+        [Display(Name = "Major")]
+        public string studentMajor { get; set; }
         public ICollection<Schedule> Schedules { get; set; }
         public string studentFullName 
         { get

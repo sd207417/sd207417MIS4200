@@ -40,7 +40,7 @@ namespace sd207417MIS4200.Controllers
         // GET: Schedules/Create
         public ActionResult Create()
         {
-            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseDescription");
+            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection");
             ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName");
             return View();
         }
@@ -59,7 +59,7 @@ namespace sd207417MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseDescription", schedule.courseID);
+            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection", schedule.courseID);
             ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName", schedule.studentID);
             return View(schedule);
         }
@@ -76,7 +76,7 @@ namespace sd207417MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseDescription", schedule.courseID);
+            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection", schedule.courseID);
             ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName", schedule.studentID);
             return View(schedule);
         }
@@ -94,7 +94,7 @@ namespace sd207417MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseDescription", schedule.courseID);
+            ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection", schedule.courseID);
             ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName", schedule.studentID);
             return View(schedule);
         }

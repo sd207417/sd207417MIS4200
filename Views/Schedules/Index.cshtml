@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>List of schedules</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.semester)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.scheduleID }) |
+            @Html.ActionLink(" ", "Edit", new { id=item.scheduleID }, new { @class="glyphicon glyphicon-pencil"}) |
             @Html.ActionLink("Details", "Details", new { id=item.scheduleID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.scheduleID })
+            @Html.ActionLink(" ", "Delete", new { id=item.scheduleID }, new { @class = "glyphicon glyphicon-trash" })
         </td>
     </tr>
 }

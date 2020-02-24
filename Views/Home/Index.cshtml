@@ -5,7 +5,7 @@
 <div class="jumbotron">
     <h1>MIS4200</h1>
     <p class="lead">Welcome to my home page for the course!</p>
-    <p><a href="https://www.linkedin.com/in/samuel-damko?trk=people-guest_people_search-card" class="btn btn-primary btn-lg">Connect With Me &raquo;</a></p>
+    <p><a href="https://www.linkedin.com/in/samuel-damko?trk=people-guest_people_search-card" class="btn btn-success btn-lg">Connect With Me &raquo;</a></p>
 </div>
 
 <div class="row">
@@ -14,20 +14,34 @@
         <p>
             I want to get into consulting upon entering the business world. Smaller consulting companies interest me like Infoverity. 
         </p>
-        <p><a class="btn btn-default" href="https://www.infoverity.com/">Learn more &raquo;</a></p>
+        <p><a class="btn btn-info" href="https://www.infoverity.com/">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Wendy's</h2>
         <p>Wendy's is one of my favorite fast food places. It helps that there is one so close to Copeland if I need a quick lunch. My favorite thing to order is the spicy chicken sandwich.</p>
         <p><a class="btn btn-default" href="https://menu.wendys.com/en_US/categories/">Learn more &raquo;</a></p><br />
-        @Html.ActionLink("Students", "Index", "Students")<br />
-        @Html.ActionLink("Courses", "Index", "Courses")<br />
-        @Html.ActionLink("Schedules", "Index", "Schedules")<br />
-        @Html.ActionLink("Instructors", "Index", "Instructors")<br />
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Index","Students")'">Student</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Index","Courses")'">Courses</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Index","Schedules")'">Schedules</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='@Url.Action("Index","Instructors")'">Instructors</button>
+        </div>
+        <br />
     </div>
     <div class="col-md-4">
-        <h2>Netflix</h2>
-        <p>Watching shows on Netflix is how I spend a lot of my free time. I enjoy comedies and documentaries. I am open to suggestions from those around me!</p>
-        <p><a class="btn btn-default" href="https://www.netflix.com/">Learn more &raquo;</a></p>
+        <h2>SD3</h2>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                University
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Students", "Index", "Students")</li>
+                <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
+                <li>@Html.ActionLink("Schedules", "Index", "Schedules")</li>
+                <li>@Html.ActionLink("Instructors", "Index", "Instructors")</li>
+            </ul>
+        </div>
+        
     </div>
 </div>

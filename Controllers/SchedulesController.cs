@@ -41,7 +41,7 @@ namespace sd207417MIS4200.Controllers
         public ActionResult Create()
         {
             ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection");
-            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName");
+            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFullName");
             return View();
         }
 
@@ -60,7 +60,7 @@ namespace sd207417MIS4200.Controllers
             }
 
             ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection", schedule.courseID);
-            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName", schedule.studentID);
+            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFullName", schedule.studentID);
             return View(schedule);
         }
 
@@ -77,7 +77,7 @@ namespace sd207417MIS4200.Controllers
                 return HttpNotFound();
             }
             ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection", schedule.courseID);
-            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName", schedule.studentID);
+            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFullName", schedule.studentID);
             return View(schedule);
         }
 
@@ -95,7 +95,7 @@ namespace sd207417MIS4200.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.courseID = new SelectList(db.Course, "courseID", "courseSection", schedule.courseID);
-            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFirstName", schedule.studentID);
+            ViewBag.studentID = new SelectList(db.Student, "studentID", "studentFullName", schedule.studentID);
             return View(schedule);
         }
 

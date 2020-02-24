@@ -4,15 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Here is the list of existing courses.</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped table-bordered">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Instructor.instructorFirstName)
+            @Html.DisplayNameFor(model => model.Instructor.instructorFullName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.courseSection)
@@ -32,7 +32,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Instructor.instructorFirstName)
+            @Html.DisplayFor(modelItem => item.Instructor.instructorFullName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.courseSection)
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.courseTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.courseID }) |
+            @Html.ActionLink(" ", "Edit", new { id=item.courseID }, new { @class="glyphicon glyphicon-pencil"}) |
             @Html.ActionLink("Details", "Details", new { id=item.courseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.courseID })
+            @Html.ActionLink(" ", "Delete", new { id=item.courseID }, new { @class = "glyphicon glyphicon-trash" })
         </td>
     </tr>
 }

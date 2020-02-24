@@ -40,7 +40,7 @@ namespace sd207417MIS4200.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFirstName");
+            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFullName");
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace sd207417MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFirstName", course.instructorID);
+            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFullName", course.instructorID);
             return View(course);
         }
 
@@ -74,7 +74,7 @@ namespace sd207417MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFirstName", course.instructorID);
+            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFullName", course.instructorID);
             return View(course);
         }
 
@@ -91,7 +91,7 @@ namespace sd207417MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFirstName", course.instructorID);
+            ViewBag.instructorID = new SelectList(db.Instructor, "instructorID", "instructorFullName", course.instructorID);
             return View(course);
         }
 
